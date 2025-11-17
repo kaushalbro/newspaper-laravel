@@ -919,7 +919,7 @@
                 <div class="video-gallery-box">
                     <div class="one-item-slider">
 
-                         @if($video_large->embed_video != NULL)
+                         @if($video_large?->embed_video != NULL)
                             {!!$video_large->embed_video!!}
                         @else
                             <video width="100%" height="435" controls>
