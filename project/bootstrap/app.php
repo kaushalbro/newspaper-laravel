@@ -12,12 +12,8 @@
 */
 
 $app = new Illuminate\Foundation\Application(
-    dirname(__DIR__)
+    $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
 );
-
-$app->bind('path.public', function() {
-   return base_path() . '/../';
-});
 
 /*
 |--------------------------------------------------------------------------
@@ -45,21 +41,15 @@ $app->singleton(
     App\Exceptions\Handler::class
 );
 
- $app->useEnvironmentPath(realpath(__DIR__.'/../vendor/markury/src/'));
-
 /*
 |--------------------------------------------------------------------------
 | Return The Application
 |--------------------------------------------------------------------------
 |
 | This script returns the application instance. The instance is given to
-| the calling script so we can separate the building of the instancesd('contact');
+| the calling script so we can separate the building of the instances
 | from the actual running of the application and sending responses.
 |
 */
-
-$path = base_path();
-$modifiedPath = str_replace("/project","",$path);
-$app->usePublicPath($modifiedPath);
 
 return $app;
