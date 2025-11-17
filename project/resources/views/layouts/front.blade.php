@@ -14,15 +14,15 @@
 			<meta property="og:title" content="{{$gs->title}}" />
 			<meta property="og:description" content="{{ strip_tags($gs->footer) }}" />
 			<meta property="og:image" content="{{asset('assets/images/logo/'.$gs->logo)}}" />
-			<meta name="keywords" content="{{ $seo->meta_keys }}">
+			<meta name="keywords" content="{{ $seo?->meta_keys }}">
 			<meta name="author" content="GeniusOcean">
 			<title>{{$gs->title}}</title>
 		@endif
-	@else 
+	@else
 		<meta property="og:title" content="{{$gs->title}}" />
 		<meta property="og:description" content="{{ strip_tags($gs->footer) }}" />
 		<meta property="og:image" content="{{asset('assets/images/logo/'.$gs->logo)}}" />
-		<meta name="keywords" content="{{ $seo->meta_keys }}">
+		<meta name="keywords" content="{{ $seo?->meta_keys }}">
 		<meta name="author" content="GeniusOcean">
 		<title>{{$gs->title}}</title>
 	@endif
@@ -33,7 +33,7 @@
 
 	@if ($default_font->font_value)
 		<link href="https://fonts.googleapis.com/css?family={{ $default_font->font_value }}&display=swap" rel="stylesheet">
-	@else 
+	@else
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 	@endif
 	<!-- favicon -->
@@ -80,12 +80,12 @@
 		<i class="fas fa-chevron-right"></i>
 	</div>
 	<!-- Back to Top End -->
-	
+
 	<script>
 		var mainurl = "{{url('/')}}/";
 		var gs      = "{{$gs}}";
 	</script>
-	
+
 	<!-- jquery -->
 	<script src="{{asset('assets/front/js/jquery.js')}}"></script>
 	<!-- bootstrap -->
@@ -97,11 +97,11 @@
 	<script src="{{asset('assets/front/js/pignose.calender.js')}}"></script>
 	<!-- plugin js-->
 	<script src="{{asset('assets/front/js/plugin.js')}}"></script>
-	
+
 	<script src="{{asset('assets/front/js/jquery.unveil.js')}}"></script>
 	<!-- main -->
 	<script src="{{asset('assets/front/js/main.js')}}"></script>
-	
+
 	<script src="{{asset('assets/front/js/custom.js')}}"></script>
 
 
@@ -130,7 +130,7 @@
 			setInterval('updateClock()', 1000);
 		});
 	</script>
-	
+
     @stack('js')
 
 </body>

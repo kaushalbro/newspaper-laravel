@@ -7,34 +7,34 @@
 @endif
 
 
-@if(Auth::guard('admin')->user()->sectionCheck('pages'))   
+@if(Auth::guard('admin')->user()->sectionCheck('pages'))
 <li>
     <a href="#page" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">
         <i class="fa fa-window-restore"></i>{{ __('Pages') }}
     </a>
     <ul class="collapse list-unstyled" id="page" data-parent="#accordion">
         <li>
-            <a href="{{ route('admin.page.create') }}"><i class="fas fa-angle-double-right"></i><span>{{ __('Add Page') }}</span></a>
+            <a href="{{ route('admin.page.create') }}"><i class="fas fa-angle-right"></i><span>{{ __('Add Page') }}</span></a>
         </li>
         <li>
-            <a href="{{ route('admin.page.index') }}"><i class="fas fa-angle-double-right"></i><span>{{ __('Pages') }}</span></a>
+            <a href="{{ route('admin.page.index') }}"><i class="fas fa-angle-right"></i><span>{{ __('Pages') }}</span></a>
         </li>
     </ul>
 </li>
 @endif
 
 
-@if (Auth::guard('admin')->user()->sectionCheck('categories'))   
+@if (Auth::guard('admin')->user()->sectionCheck('categories'))
 <li>
     <a href="#menu2" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">
         <i class="fa fa-folder-open"></i>{{ __('Categories') }}
     </a>
     <ul class="collapse list-unstyled" id="menu2" data-parent="#accordion">
         <li>
-            <a href="{{ route('categories.index') }}"><i class="fas fa-angle-double-right"></i><span>{{ __('Categories') }}</span></a>
+            <a href="{{ route('categories.index') }}"><i class="fas fa-angle-right"></i><span>{{ __('Categories') }}</span></a>
         </li>
         <li>
-            <a href="{{ route('subcategories.index') }}"><i class="fas fa-angle-double-right"></i><span>{{ __('SubCategories') }}</span></a>
+            <a href="{{ route('subcategories.index') }}"><i class="fas fa-angle-right"></i><span>{{ __('SubCategories') }}</span></a>
         </li>
     </ul>
 </li>
@@ -48,7 +48,7 @@
 </li>
 
 
-@if (Auth::guard('admin')->user()->sectionCheck('add_gallery'))   
+@if (Auth::guard('admin')->user()->sectionCheck('add_gallery'))
 <li>
     <a href="#gallery" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">
         <i class="fas fa-image"></i>{{ __('Add Gallery') }}
@@ -71,7 +71,7 @@
 @endif
 
 
-@if (Auth::guard('admin')->user()->sectionCheck('posts'))   
+@if (Auth::guard('admin')->user()->sectionCheck('posts'))
 <li>
     <a href="#menu4" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">
         <i class="fa fa-bars"></i>{{ __('Posts') }}
@@ -98,21 +98,21 @@
 @endif
 
 
-@if (Auth::guard('admin')->user()->sectionCheck('schedule_post'))    
+@if (Auth::guard('admin')->user()->sectionCheck('schedule_post'))
 <li>
     <a href="{{ route('schedule.index') }}"><span><i class="fa fa-calendar" aria-hidden="true"></i>{{ __('Schedule Post') }}</span></a>
 </li>
 @endif
 
 
-@if (Auth::guard('admin')->user()->sectionCheck('drafts'))    
+@if (Auth::guard('admin')->user()->sectionCheck('drafts'))
 <li>
     <a href="{{ route('draft.index') }}"><span><i class="fab fa-firstdraft"></i>{{ __('Drafts') }}</span></a>
 </li>
 @endif
 
 
-@if (Auth::guard('admin')->user()->sectionCheck('rss_feeds'))   
+@if (Auth::guard('admin')->user()->sectionCheck('rss_feeds'))
 <li>
     <a href="#rss" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">
         <i class="fas fa-rss"></i>{{ __('Rss Feeds') }}
@@ -129,7 +129,7 @@
 @endif
 
 
-@if (Auth::guard('admin')->user()->sectionCheck('polls'))    
+@if (Auth::guard('admin')->user()->sectionCheck('polls'))
 <li>
     <a href="#poll" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">
         <i class="fa fa-list"></i>{{ __('Polls') }}
@@ -146,7 +146,7 @@
 @endif
 
 
-@if (Auth::guard('admin')->user()->sectionCheck('widgets'))   
+@if (Auth::guard('admin')->user()->sectionCheck('widgets'))
 <li>
     <a href="#widget" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">
         <i class="fas fa-tachometer-alt"></i>{{ __('Widgets') }}
@@ -166,7 +166,7 @@
 @endif
 
 
-@if (Auth::guard('admin')->user()->sectionCheck('create_ads'))    
+@if (Auth::guard('admin')->user()->sectionCheck('create_ads'))
 <li>
     <a href="#menu8" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">
         <i class="fas fa-dollar-sign"></i>{{ __('Adverisment Spaces') }}
@@ -184,7 +184,7 @@
 @endif
 
 
-@if (Auth::guard('admin')->user()->sectionCheck('newsLetter'))   
+@if (Auth::guard('admin')->user()->sectionCheck('newsLetter'))
 <li>
     <a href="#menu9" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">
         <i class="fa fa-envelope"></i>{{ __('NewsLetter') }}
@@ -201,7 +201,7 @@
 </li>
 @endif
 
-@if (Auth::guard('admin')->user()->sectionCheck('languages'))    
+@if (Auth::guard('admin')->user()->sectionCheck('languages'))
 <li>
     <a href="#menu10" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">
         <i class="fa fa-language"></i>{{ __('Languages') }}
@@ -219,7 +219,7 @@
 @endif
 
 
-@if (Auth::guard('admin')->user()->sectionCheck('general_settings'))    
+@if (Auth::guard('admin')->user()->sectionCheck('general_settings'))
 <li>
     <a href="#general" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">
         <i class="fas fa-cogs"></i>General Settings
@@ -229,7 +229,7 @@
             <a href="{{route('admin.generalsettings.logo')}}"><span>Logo</span></a>
         </li>
         <li>
-            <a href="{{route('admin.languagelogo.index')}}"><span><i class="fas fa-angle-double-right"></i>{{__('Language Base Logo')}}</span></a>
+            <a href="{{route('admin.languagelogo.index')}}"><span><i class="fas fa-angle-right"></i>{{__('Language Base Logo')}}</span></a>
         </li>
         <li>
             <a href="{{route('admin.generalsettings.favicon')}}"><span>Favicon</span></a>
@@ -246,7 +246,7 @@
         <li>
             <a href="{{route('admin.generalsettings.footer')}}"><span>Footer</span></a>
         </li>
-        
+
         <li>
             <a href="{{route('admin.generalsettings.errorPage')}}"><span>Error Page</span></a>
         </li>
@@ -256,7 +256,7 @@
 @endif
 
 
-@if (Auth::guard('admin')->user()->sectionCheck('social_settings'))    
+@if (Auth::guard('admin')->user()->sectionCheck('social_settings'))
 <li>
     <a href="#socials" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">
         <i class="fas fa-paper-plane"></i>{{ __('Social Settings') }}
@@ -270,19 +270,19 @@
 @endif
 
 
-@if (Auth::guard('admin')->user()->sectionCheck('emails_settings'))    
+@if (Auth::guard('admin')->user()->sectionCheck('emails_settings'))
 <li>
     <a href="#emails" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">
         <i class="fas fa-at"></i>Email Settings
     </a>
     <ul class="collapse list-unstyled" id="emails" data-parent="#accordion">
-        <li><a href="{{route('admin.email.config')}}"><span>Email Configurations</span></a></li>    
+        <li><a href="{{route('admin.email.config')}}"><span>Email Configurations</span></a></li>
     </ul>
 </li>
 @endif
 
 
-@if (Auth::guard('admin')->user()->sectionCheck('seo_tools'))   
+@if (Auth::guard('admin')->user()->sectionCheck('seo_tools'))
 <li>
     <a href="#seoTools" class="accordion-toggle wave-effect" data-toggle="collapse" aria-expanded="false">
         <i class="fas fa-wrench"></i>SEO Tools
@@ -300,13 +300,13 @@
 @endif
 
 
-@if (Auth::guard('admin')->user()->sectionCheck('site_map'))  
+@if (Auth::guard('admin')->user()->sectionCheck('site_map'))
 <li>
     <a href="{{ route('admin.sitemap.all') }}" class=" wave-effect"><i class="fas fa-sitemap"></i>{{ __('Site Map') }}</a>
 </li>
 @endif
 
-@if (Auth::guard('admin')->user()->sectionCheck('font_option'))    
+@if (Auth::guard('admin')->user()->sectionCheck('font_option'))
 <li>
     <a href="{{ route('fonts.index') }}" class=" wave-effect"><i class="fa fa-font"></i>{{ __('Font Option') }}</a>
 </li>
@@ -316,19 +316,19 @@
 @if (Auth::guard('admin')->user()->sectionCheck('role_management'))
 <li>
     <a href="{{ route('admin.role.index') }}" class=" wave-effect"><i class="fas fa-user-tag"></i>{{ __('Role Management') }}</a>
-</li>  
+</li>
 @endif
 
 
 @if (Auth::guard('admin')->user()->sectionCheck('user_management'))
 <li>
     <a href="{{ route('admin.staff.index') }}" class=" wave-effect"><i class="fas fa-user-secret"></i>{{ __('User Management') }}</a>
-</li>   
+</li>
 @endif
 
 
 @if (Auth::guard('admin')->user()->sectionCheck('cache_management'))
 <li>
     <a href="{{ route('admin.cache.clear') }}" class=" wave-effect"><i class="fa fa-database"></i>{{ __('Clear Cache') }}</a>
-</li>    
+</li>
 @endif
