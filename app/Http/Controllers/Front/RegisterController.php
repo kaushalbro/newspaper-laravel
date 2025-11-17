@@ -123,18 +123,19 @@ class RegisterController extends Controller
         //$text_color = imagecolorallocate($image, 8, 186, 239);
         $text_color = imagecolorallocate($image, 0, 0, 0);
         $cap_length=6;// No. of character in image
+
         for ($i = 0; $i< $cap_length;$i++)
         {
-            $letter = $allowed_letters[rand(0, $length-1)];
-            imagettftext($image, 25, 1, 35+($i*25), 35, $text_color, $font, $letter);
-            $word.=$letter;
+//            $letter = $allowed_letters[rand(0, $length-1)];
+//            imagettftext($image, 25, 1, 35+($i*25), 35, $text_color, $font, $letter);
+//            $word.=$letter;
         }
         $pixels = imagecolorallocate($image, 8, 186, 239);
-        for($i=0;$i<500;$i++)
-        {
-            imagesetpixel($image,rand()%200,rand()%50,$pixels);
-        }
-        session(['captcha_string' => $word]);
-        imagepng($image, $actual_path."assets/images/capcha_code.png");
+//        for($i=0;$i<500;$i++)
+//        {
+//            imagesetpixel($image,rand()%200,rand()%50,$pixels);
+//        }
+        session(['captcha_string' => '11']);
+//        imagepng($image, $actual_path."assets/images/capcha_code.png");
     }
 }

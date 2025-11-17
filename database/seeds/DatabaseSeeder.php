@@ -106,10 +106,10 @@ class DatabaseSeeder extends Seeder
                 'theme_color' => '#ff0000',
                 'footer_color' => '#196cad',
                 'tawk_to' => '5e37fe76298c395d1ce5e8b1',
-                'is_talkto' => 1,
+                'is_talkto' => 0,
                 'disqus' => 'newspaper-7',
-                'is_capcha' => 1,
-                'is_disqus' => 1,
+                'is_capcha' => 0,
+                'is_disqus' => 0,
                 'copyright_text' => 'Copyright © 2019. All Rights Reserved By News Paper',
                 'copyright_color' => '#000000',
                 'footer_text' => '<font size="3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmid tempor incididunt ut labore et dolore magna aliqua.</font>',
@@ -128,9 +128,9 @@ class DatabaseSeeder extends Seeder
                 'time_zone' => 'Asia/Kathmandu',
                 'is_smtp' => 1,
                 'is_verification_email' => 1,
-                'version' => '2.2',
-                'captcha_site_key' => 'fsasdf',
-                'captcha_secret_key' => 'fsdgdfgd',
+                'version' => '3',
+                'captcha_site_key' => null,
+                'captcha_secret_key' => null,
             ]
         );
 
